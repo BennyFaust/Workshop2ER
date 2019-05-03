@@ -2,37 +2,40 @@
 using UnityEngine.UI;
 using System.Collections;
 
-public class PlayerController : MonoBehaviour
+namespace ExpandedR
 {
-
-    public Text countText;
-    public Text winText;
-
-    private int count;
-
-    void Start()
+    public class PlayerController : MonoBehaviour
     {
-        count = 0;
-        SetCountText();
-    }
 
+        public Text countText;
+        public Text winText;
 
-    void OnTriggerEnter(Collider other)
-    {
-        if (other.gameObject.CompareTag("Pick Up"))
+        private int count;
+
+        void Start()
         {
-            other.gameObject.SetActive(false);
-            count = count + 1;
+            count = 0;
             SetCountText();
         }
-    }
 
-    void SetCountText()
-    {
-        countText.text = "Count: " + count.ToString();
-        if (count >= 12)
+
+        void OnTriggerEnter(Collider other)
         {
-            winText.gameObject.SetActive(true);
+            if (other.gameObject.CompareTag("Pick Up"))
+            {
+                other.gameObject.SetActive(false);
+                count = count + 1;
+                SetCountText();
+            }
+        }
+
+        void SetCountText()
+        {
+            countText.text = "Count: " + count.ToString();
+            if (count >= 12)
+            {
+                winText.gameObject.SetActive(true);
+            }
         }
     }
 }
