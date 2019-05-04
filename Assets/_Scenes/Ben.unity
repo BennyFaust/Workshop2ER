@@ -26880,6 +26880,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: c88e61c9b4322614cb0af15bfb8f9b6c, type: 3}
+      propertyPath: m_Name
+      value: CubeMadeInMaya
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c88e61c9b4322614cb0af15bfb8f9b6c, type: 3}
   m_IsPrefabAsset: 0
